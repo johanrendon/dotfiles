@@ -1,4 +1,7 @@
-sudo pacman -S nvim alacritty fish notes startship tmux
+#notes
+curl -Ls https://raw.githubusercontent.com/pimterry/notes/latest-release/install.sh | sudo bash
+
+sudo pacman -S neovim alacritty fish starship tmux
 
 # Stow
 stow alacritty/
@@ -6,5 +9,5 @@ stow fish/
 stow git 
 stow notes/
 stow nvim/
-stow startship
+stow starship
 stow tmux/
