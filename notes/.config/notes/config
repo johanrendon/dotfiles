@@ -1,8 +1,3 @@
-# This is an example configuration file for notes
-# To use it, copy to ~/.config/notes/config
-# This config is case sensitive
-
-# Set the editor that notes are opened with
 EDITOR=nvim
 
 # Change the quicknote format to get rid of the word "quicknote"
@@ -15,7 +10,3 @@ NOTES_EXT="md"
 # NOTES_DIRECTORY=~/notes
 
 # Define the directory where templates are stored
-TEMPLATES_DIR= /notes/templates
-
-# Define command to run after modification command
-# POST_COMMAND="/path/to/custom_script.sh"
