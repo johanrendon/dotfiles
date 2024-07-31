@@ -1,0 +1,7 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.location": "hidden",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.startupEditor": "none"
+}

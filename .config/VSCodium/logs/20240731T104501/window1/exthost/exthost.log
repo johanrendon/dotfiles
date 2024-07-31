@@ -1,0 +1,78 @@
+2024-07-31 10:45:03.177 [info] Extension host with pid 18718 started
+2024-07-31 10:45:03.208 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-31 10:45:03.211 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2024-07-31 10:45:03.221 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-31 10:45:03.268 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-31 10:45:03.333 [info] Eager extensions activated
+2024-07-31 10:45:03.351 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:03.353 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:03.365 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:03.370 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:03.391 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:03.402 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 10:45:04.498 [error] Error: ENOENT: no such file or directory, open '/home/johan/.config/VSCodium/User/globalStorage/vscodevim.vim/.registers'
+2024-07-31 10:45:12.396 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-31 11:00:44.665 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:00:44.674 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:00:44.716 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:02:23.162 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-31 11:02:23.166 [error] An error occurred when deactivating the subscriptions for extension 'Gruntfuggly.todo-tree':
+2024-07-31 11:02:23.167 [error] AggregateError: Encountered errors while disposing of store
+	at h (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:834)
+	at m._deactivate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:13048)
+	at /usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10194
+	at Array.map (<anonymous>)
+	at m._deactivateAll (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10181)
+	at m.terminate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10564)
+	at h.terminate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:1908)
+	at i (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:12354)
+	at MessagePortMain.<anonymous> (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:8164)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285)
+2024-07-31 11:02:23.169 [error] Error: ENOENT: no such file or directory, open '/home/johan/.config/VSCodium/User/globalStorage/vscodevim.vim/.registers'
+2024-07-31 11:02:23.169 [info] Extension host with pid 18718 exiting with code 0
+2024-07-31 11:02:23.456 [info] Extension host with pid 26298 started
+2024-07-31 11:02:23.459 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-31 11:02:23.463 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:02:23.465 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:02:23.476 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-31 11:02:23.489 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onCommand:material-icon-theme.activateIcons'
+2024-07-31 11:02:23.631 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-31 11:02:23.632 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2024-07-31 11:02:23.639 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-31 11:02:23.651 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-31 11:02:23.672 [info] Eager extensions activated
+2024-07-31 11:02:23.726 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 11:02:23.727 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 11:02:23.729 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 11:02:23.731 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2024-07-31 11:03:54.667 [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: false, activationEvent: 'onNotebookSerializer:jupyter-notebook'
+2024-07-31 11:03:54.705 [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onNotebook:jupyter-notebook'
+2024-07-31 11:03:54.708 [info] ExtensionService#_doActivateExtension ms-toolsai.vscode-jupyter-cell-tags, startup: false, activationEvent: 'onNotebook:jupyter-notebook'
+2024-07-31 11:03:54.709 [info] ExtensionService#_doActivateExtension ms-toolsai.vscode-jupyter-slideshow, startup: false, activationEvent: 'onNotebook:jupyter-notebook'
+2024-07-31 11:03:55.164 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'api', root cause: ms-toolsai.jupyter
+2024-07-31 11:03:55.284 [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter-renderers, startup: false, activationEvent: 'api', root cause: ms-toolsai.jupyter
+2024-07-31 11:03:55.497 [error] Error: spawn /home/johan/.vscode-oss/extensions/ms-python.python-2024.10.0-universal/python-env-tools/bin/pet ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+	at onErrorNT (node:internal/child_process:484:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2024-07-31 11:03:58.953 [error] Canceled: Canceled
+	at Xy.selectLocalKernel (/home/johan/.vscode-oss/extensions/ms-toolsai.jupyter-2024.6.0-universal/dist/extension.node.js:304:142054)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async zy.onSelectLocalKernel (/home/johan/.vscode-oss/extensions/ms-toolsai.jupyter-2024.6.0-universal/dist/extension.node.js:304:118116)
+	at async f._executeContributedCommand (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:241916) jupyter.kernel.selectLocalPythonEnvironment {"value":"ms-toolsai.jupyter","_lower":"ms-toolsai.jupyter"}
+2024-07-31 11:04:04.204 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-31 11:04:04.208 [error] An error occurred when deactivating the subscriptions for extension 'Gruntfuggly.todo-tree':
+2024-07-31 11:04:04.208 [error] AggregateError: Encountered errors while disposing of store
+	at h (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:834)
+	at m._deactivate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:13048)
+	at /usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10194
+	at Array.map (<anonymous>)
+	at m._deactivateAll (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10181)
+	at m.terminate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10564)
+	at h.terminate (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:1908)
+	at i (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:12354)
+	at MessagePortMain.<anonymous> (/usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:8164)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285)
+2024-07-31 11:04:04.214 [info] Extension host with pid 26298 exiting with code 0
