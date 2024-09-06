@@ -56,10 +56,10 @@ nnoremap("S", function()
 end)
 
 vnoremap("sv", function()
-    -- Press 'S' for quick find/replace for the word under the cursor in visual mode
-    local cmd = ":<C-u>'<,'>s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
-    local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-    vim.api.nvim_feedkeys(keys, "n", false)
+	-- Press 'S' for quick find/replace for the word under the cursor in visual mode
+	local cmd = ":<C-u>'<,'>s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
+	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+	vim.api.nvim_feedkeys(keys, "n", false)
 end)
 
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
@@ -169,7 +169,6 @@ nnoremap("<leader>gf", function()
 		require("telescope.builtin").git_files()
 	end
 end, { desc = "Search [G]it [F]iles" })
-
 
 -- Telescope keybinds --
 nnoremap("<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
@@ -289,8 +288,11 @@ tnoremap("<C-j>", [[<Cmd>wincmd j<CR>]])
 tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]])
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
 
+-- Floaterm
+nnoremap("nt", ":FloatermNew<cr>")
+nnoremap("nk", ":FloatermKill<cr>")
+
 -- Reenable default <space> functionality to prevent input delay
 tnoremap("<space>", "<space>")
 
 return M
-
