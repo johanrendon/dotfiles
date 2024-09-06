@@ -71,8 +71,8 @@ alias gp='git push -u origin main'
 #custom
 alias update='sudo pacman -Syyu'
 alias code='vscodium'
-alias v = 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
-
+alias fh='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias data='ccds ~/Templates/cookiecutter-data-science'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/johan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
