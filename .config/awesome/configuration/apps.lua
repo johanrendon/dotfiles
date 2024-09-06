@@ -25,6 +25,8 @@ return {
 		power_manager = "xfce4-power-manager",
 		--- Default rofi global menu
 		app_launcher = "rofi -no-lazy-grab -show drun -modi drun -theme " .. config_dir .. "configuration/rofi.rasi",
+
+		notes = "md.obsidian.Obsidian",
 	},
 
 	--- List of binaries/shell scripts that will execute for a certain task

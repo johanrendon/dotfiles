@@ -48,6 +48,10 @@ awful.keyboard.append_global_keybindings({
 		awful.spawn(apps.default.web_browser)
 	end, { description = "open web browser", group = "app" }),
 
+	awful.key({mod}, "o", function ()
+		awful.spawn(apps.default.notes)
+	end, { decoration = "open notes app", group = "app"}),
+
 	--- WM
 	--- ~~
 	--- Restart awesome
@@ -143,7 +147,7 @@ awful.keyboard.append_global_keybindings({
 	--- Hotkeys
 	--- ~~~~~~~
 	--- Music player
-	awful.key({ mod }, "grave", function()
+	awful.key({ mod }, "s", function()
 		awful.spawn.with_shell(apps.default.music_player)
 	end, { description = "open music client", group = "hotkeys" }),
 
