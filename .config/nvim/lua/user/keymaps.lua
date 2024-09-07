@@ -289,8 +289,8 @@ tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]])
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
 
 -- Floaterm
-nnoremap("nt", ":FloatermNew<cr>")
-nnoremap("nk", ":FloatermKill<cr>")
+nnoremap("<leader>nt", ":FloatermNew<cr>")
+nnoremap("<leader>kt", ":FloatermKill<cr>")
 
 -- Reenable default <space> functionality to prevent input delay
 tnoremap("<space>", "<space>")
