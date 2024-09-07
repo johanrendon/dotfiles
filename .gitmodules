@@ -1,0 +1,3 @@
+[submodule "bin/docsAI"]
+	path = bin/docsAI
+	url = https://github.com/johanrendon/docs-ai
