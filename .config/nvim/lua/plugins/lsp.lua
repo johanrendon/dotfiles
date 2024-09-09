@@ -83,6 +83,7 @@ return {
 			local formatters = {
 				prettierd = {},
 				stylua = {},
+				black = {},
 			}
 
 			local manually_installed_servers = { "rust_analyzer" }
@@ -153,6 +154,7 @@ return {
 			},
 			formatters_by_ft = {
 				lua = { "stylua" },
+				python = { "black" },
 			},
 		},
 	},
