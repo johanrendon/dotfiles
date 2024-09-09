@@ -96,3 +96,6 @@ export PATH="$PATH:/home/johan/.local/bin"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+# starship
+eval "$(starship init zsh)"
