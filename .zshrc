@@ -72,6 +72,7 @@ alias gp='git push -u origin main'
 alias update='sudo pacman -Syyu'
 alias code='vscodium'
 alias fh='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias gdd='cd "$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"'
 alias data='ccds ~/Templates/cookiecutter-data-science'
 alias nk="tmux popup -E -w 80% -h 50% -x C -y C 'bat .config/nvim/lua/user/keymaps.lua'"
 # >>> conda initialize >>>
