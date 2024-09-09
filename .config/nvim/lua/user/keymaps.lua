@@ -16,18 +16,20 @@ nnoremap("<space>", "<nop>")
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
 -- Save with leader key
-nnoremap("<leader>w", "<cmd>w<cr>", { silent = false })
+nnoremap("<leader>w", "<cmd>w<cr>", { silent = false, desc = "Save" })
 
 -- Quit with leader key
-nnoremap("<leader>q", "<cmd>q<cr>", { silent = false })
+nnoremap("<leader>q", "<cmd>q<cr>", { silent = false, desc = "Quit" })
 
 -- Save and Quit with leader key
-nnoremap("<leader>z", "<cmd>wq<cr>", { silent = false })
+nnoremap("<leader>z", "<cmd>wq<cr>", { silent = false, desc = "Save and quit" })
+
+nnoremap("<leader>x", ":source % <CR>", { desc = "execute code" })
 
 -- Map Oil to <leader>e
 nnoremap("<leader>e", function()
 	require("oil").toggle_float()
-end)
+end, { desc = "Open oil" })
 
 -- Map Undotree to <leader>
 nnoremap("<leader>ut", ":UndotreeToggle<CR>", { desc = "Toggle [U]ndo[T]ree " })
@@ -70,37 +72,37 @@ nnoremap("H", "^")
 nnoremap("U", "<C-r>")
 
 -- Turn off highlighted results
-nnoremap("<leader>no", "<cmd>noh<cr>")
+nnoremap("<leader>no", "<cmd>noh<cr>", { desc = " Turn off highlighted results" })
 
 -- Goto previous diagnostic of any severity
 nnoremap("[d", function()
 	vim.diagnostic.goto_prev({})
 	vim.api.nvim_feedkeys("zz", "n", false)
-end)
+end, { desc = "Go to previous diagnostic" })
 
 -- Goto next error diagnostic
 nnoremap("]e", function()
 	vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
 	vim.api.nvim_feedkeys("zz", "n", false)
-end)
+end, { desc = " Go to next error diagnostic" })
 
 -- Goto previous error diagnostic
 nnoremap("[e", function()
 	vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
 	vim.api.nvim_feedkeys("zz", "n", false)
-end)
+end, { desc = "Go to previous error diagnostic" })
 
 -- Goto next warning diagnostic
 nnoremap("]w", function()
 	vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARN })
 	vim.api.nvim_feedkeys("zz", "n", false)
-end)
+end, { desc = "Go to next warning diagnostic" })
 
 -- Goto previous warning diagnostic
 nnoremap("[w", function()
 	vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.WARN })
 	vim.api.nvim_feedkeys("zz", "n", false)
-end)
+end, { desc = "Go to previous warning diagnostic" })
 
 -- Moonlander diagnostic movements --
 
@@ -109,28 +111,28 @@ nnoremap("<leader>d", function()
 	vim.diagnostic.open_float({
 		border = "rounded",
 	})
-end)
+end, { desc = "Open diagnostic under the cursor in a float window" })
 
 -- Place all dignostics into a qflist
 nnoremap("<leader>ld", vim.diagnostic.setqflist, { desc = "Quickfix [L]ist [D]iagnostics" })
 
 -- Navigate to next qflist item
-nnoremap("<leader>cn", ":cnext<cr>zz")
+nnoremap("<leader>cn", ":cnext<cr>zz", { desc = "Navigate to next qflist item" })
 
 -- Navigate to previos qflist item
-nnoremap("<leader>cp", ":cprevious<cr>zz")
+nnoremap("<leader>cp", ":cprevious<cr>zz", { desc = "Navigate to previous qflist item" })
 
 -- Open the qflist
-nnoremap("<leader>co", ":copen<cr>zz")
+nnoremap("<leader>co", ":copen<cr>zz", { desc = "Open qflist" })
 
 -- Close the qflist
-nnoremap("<leader>cc", ":cclose<cr>zz")
+nnoremap("<leader>cc", ":cclose<cr>zz", { desc = "" })
 
 -- Map MaximizerToggle (szw/vim-maximizer) to leader-m
 nnoremap("<leader>m", ":MaximizerToggle<cr>")
 
 -- Resize split windows to be equal size
-nnoremap("<leader>=", "<C-w>=")
+nnoremap("<leader>=", "<C-w>=", { desc = "Resize split equal size" })
 
 -- Press leader f to format
 nnoremap("<leader>f", function()
@@ -289,8 +291,8 @@ tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]])
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
 
 -- Floaterm
-nnoremap("<leader>nt", ":FloatermNew<cr>")
-nnoremap("<leader>kt", ":FloatermKill<cr>")
+nnoremap("<leader>nt", ":FloatermNew<cr>", { desc = "Open Floaterm" })
+nnoremap("<leader>kt", ":FloatermKill<cr>", { desc = "Open Floaterm" })
 
 -- Reenable default <space> functionality to prevent input delay
 tnoremap("<space>", "<space>")
