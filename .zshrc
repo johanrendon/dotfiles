@@ -54,12 +54,16 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 
 # ls
-alias l='ls -lh'
-alias ll='ls -lah'
-alias la='ls -A'
-alias lm='ls -m'
-alias lr='ls -R'
-alias lg='ls -l --group-directories-first'
+alias ls='eza'
+alias l='eza -lh'
+alias ll='eza -lah'
+alias la='eza -A'
+alias lm='eza -m'
+alias lr='eza -R'
+alias lg='eza -l --group-directories-first'
+
+#cat
+alias cat='bat'
 
 # git
 alias gcl='git clone --depth 1'
