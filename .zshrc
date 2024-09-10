@@ -65,6 +65,9 @@ alias lg='eza -l --group-directories-first'
 #cat
 alias cat='bat'
 
+#datascience utilities
+alias ed="python ~/bin/utils/datascience/inital_exploratory.py"
+
 # git
 alias gcl='git clone --depth 1'
 alias gi='git init'
