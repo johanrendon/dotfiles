@@ -14,5 +14,8 @@ return {
 			},
 		},
 		ui = { enable = false },
+		templates = {
+			folder = "05_Others/Templates",
+		},
 	},
 }
