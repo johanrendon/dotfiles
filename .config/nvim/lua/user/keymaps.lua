@@ -295,6 +295,15 @@ tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
 -- Floaterm
 nnoremap("<leader>nt", ":FloatermNew<cr>", { desc = "Open Floaterm" })
 nnoremap("<leader>kt", ":FloatermKill<cr>", { desc = "Open Floaterm" })
+nnoremap("<leader>ht", ":FloatermHide<cr>", { desc = "Hide Floaterm" })
+nnoremap("<leader>tt", ":FloatermShow<cr>", { desc = "Toggle Floaterm" })
+
+--tmux navigation
+nnoremap("<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>")
+nnoremap("<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>")
+nnoremap("<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>")
+nnoremap("<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>")
+nnoremap("<C-Space>", "<Cmd>NvimTmuxNavigateNext<CR>")
 
 -- Harpoon keybinds --
 -- Open harpoon ui
