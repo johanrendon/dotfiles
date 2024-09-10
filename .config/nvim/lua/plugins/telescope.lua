@@ -4,6 +4,7 @@ return {
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"andrew-george/telescope-themes",
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -12,6 +13,7 @@ return {
 		},
 		config = function()
 			local actions = require("telescope.actions")
+			require("telescope").load_extension("themes")
 
 			require("telescope").setup({
 				defaults = {
@@ -34,6 +36,13 @@ return {
 					hidden = true,
 					path_display = {
 						"filename_first",
+					},
+				},
+				extensions = {
+					themes = {
+						persist = {
+							enable = true,
+						},
 					},
 				},
 			})
