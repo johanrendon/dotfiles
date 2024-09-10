@@ -52,6 +52,16 @@ nnoremap("%", "%zz")
 nnoremap("*", "*zz")
 nnoremap("#", "#zz")
 
+--Git fugitive
+
+nnoremap("<leader>gs", ":vertical Git <cr>", { desc = "Git status" })
+nnoremap("<leader>gd", ":Gvdiffsplit <cr>", { desc = "Git diff" })
+nnoremap("<leader>ga", ":Gwrite <cr>", { desc = "Git add" })
+nnoremap("<leader>gc", ":Git commit<cr>", { desc = "Git commit" })
+
+nnoremap("<leader>tgs", ":Telescope git_status<cr>", { desc = "Telescope git status" })
+nnoremap("<leader>tgc", ":Telescope git_commits<cr>", { desc = "Telescope git commits" })
+nnoremap("<leader>tgb", ":Telescope git_branches<cr>", { desc = "Telescope git branches" })
 -- Press 'S' for quick find/replace for the word under the cursor
 nnoremap("S", function()
 	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
@@ -136,6 +146,12 @@ nnoremap("<leader>m", ":MaximizerToggle<cr>")
 -- Resize split windows to be equal size
 nnoremap("<leader>=", "<C-w>=", { desc = "Resize split equal size" })
 
+-- Obsidian
+nnoremap("<leader>bn", ":ObsidianQuickSwitch<cr>", { desc = "New note or search notes" })
+nnoremap("<leader>bt", ":ObsidianTemplate<cr>", { desc = "Use Templates" })
+nnoremap("<leader>bo", ":ObsidianSearch<cr>", { desc = "Search in notes" })
+nnoremap("<leader>bf", ":ObsidianFollowLink<cr>", { desc = "Follow Link" })
+
 -- Press leader f to format
 nnoremap("<leader>f", function()
 	conform.format({
@@ -182,6 +198,7 @@ nnoremap("<leader>sf", function()
 end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 nnoremap("<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
+nnoremap("<leader>ct", ":Telescope themes<cr>", { desc = "[C]hange [T]heme" })
 
 nnoremap("<leader>sc", function()
 	require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
