@@ -1,3 +1,5 @@
+import subprocess
+import shlex
 from pathlib import Path
 from typing import Annotated, Optional
 from config import init_config
@@ -20,6 +22,9 @@ def change_theme(
     show_themes: Annotated[
         bool, typer.Option(help="Show the available themes", is_eager=True)
     ] = False,
+    gui: Annotated[
+        bool, typer.Option(help="Display an ui to select the themes")
+    ] = False,
 ) -> None:
     """
     Change the alacritty theme.
@@ -33,6 +38,17 @@ def change_theme(
         typer.echo("Available themes:")
         for t in themes:
             typer.echo(f" - {t.split('.')[0]}")
+
+    if gui:
+
+        theme = subprocess.run(
+            r"fd . {colorschemes_path} --type f '*.toml' | sed 's/\.toml$//' | xargs -n 1 basename | fzf-tmux --reverse -p".format(
+                colorschemes_path=colorschemes_path
+            ),
+            text=True,
+            capture_output=True,
+            shell=True,
+        ).stdout.strip()
 
     if theme:
         theme = f"{theme.lower()}.toml"
