@@ -6,7 +6,7 @@ unfocused_hollow = false
 
 [cursor.style]
 blinking = "On"
-shape = "Block"
+shape = "Beam"
 
 [env]
 TERM = "alacritty"
@@ -25,6 +25,6 @@ startup_mode = "Windowed"
 columns = 82
 lines = 24
 
-[window.padding]
-x = 12
-y = 12
+# [window.padding]
+# x = 10 
+# y = 10
