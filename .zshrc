@@ -76,9 +76,10 @@ alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push -u origin main'
+alias lzg='lazygit'
 
 #zoxide
-alias cd='z'
+alias cd=''
 
 #custom
 alias update='sudo pacman -Syyu'
