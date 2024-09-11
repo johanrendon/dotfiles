@@ -2,3 +2,4 @@
 __pycache__/
 colors.toml
 .config/nvim/lazy-lock.json
+.config/nvim/lua/current-theme.lua
