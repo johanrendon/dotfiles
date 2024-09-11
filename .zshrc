@@ -15,6 +15,8 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+source <(fzf --zsh)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -75,13 +77,17 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push -u origin main'
 
+#zoxide
+alias cd='z'
+
 #custom
 alias update='sudo pacman -Syyu'
 alias code='vscodium'
-alias fh='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias fh='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview="bat --color=always {}" | xargs -r nvim'
 alias gdd='cd "$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"'
 alias data='ccds ~/Templates/cookiecutter-data-science'
 alias nk="tmux popup -E -w 80% -h 50% -x C -y C 'bat .config/nvim/lua/user/keymaps.lua'"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/johan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -106,3 +112,6 @@ fpath+=~/.zfunc
 
 # starship
 eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
