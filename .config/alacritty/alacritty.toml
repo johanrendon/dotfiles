@@ -12,8 +12,8 @@ shape = "Beam"
 TERM = "alacritty"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
-[shell]
-program = "/bin/tmux"
+# [shell]
+# program = "/bin/tmux"
 
 [window]
 decorations = "full"

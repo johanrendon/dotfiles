@@ -48,9 +48,9 @@ awful.keyboard.append_global_keybindings({
 		awful.spawn(apps.default.web_browser)
 	end, { description = "open web browser", group = "app" }),
 
-	awful.key({mod}, "o", function ()
+	awful.key({ mod }, "o", function()
 		awful.spawn(apps.default.notes)
-	end, { decoration = "open notes app", group = "app"}),
+	end, { decoration = "open notes app", group = "app" }),
 
 	--- WM
 	--- ~~

@@ -6,11 +6,11 @@ return {
 	--- Default Applications
 	default = {
 		--- Default terminal emulator
-		terminal = "alacritty",
+		terminal = "kitty",
 		--- Default music client
 		music_player = "com.spotify.Client",
 		--- Default text editor
-		text_editor = "alacritty -e nvim",
+		text_editor = "kitty nvim",
 		--- Default code editor
 		code_editor = "vscodium",
 		--- Default web browser
@@ -18,14 +18,14 @@ return {
 		--- Default file manager
 		file_manager = "nautilus",
 		--- Default network manager
-		network_manager = "alacritty -e nmtui",
+		network_manager = "kitty nmtui",
 		--- Default bluetooth manager
 		bluetooth_manager = "blueman-manager",
 		--- Default power manager
 		power_manager = "xfce4-power-manager",
 		--- Default rofi global menu
 		app_launcher = "rofi -no-lazy-grab -show drun -modi drun -theme " .. config_dir .. "configuration/rofi.rasi",
-
+		--- notes app
 		notes = "md.obsidian.Obsidian",
 	},
 
