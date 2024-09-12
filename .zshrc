@@ -1,11 +1,7 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="archcraft"
-
 zstyle ':omz:update' mode disabled  # disable automatic updates
-
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
