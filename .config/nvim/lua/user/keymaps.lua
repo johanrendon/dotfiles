@@ -20,6 +20,10 @@ nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 -- Save with leader key
 nnoremap("<leader>w", "<cmd>w<cr>", { silent = false, desc = "Save" })
 
+-- Move lines
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
 -- Quit with leader key
 nnoremap("<leader>q", "<cmd>q<cr>", { silent = false, desc = "Quit" })
 
@@ -172,6 +176,7 @@ nnoremap("<leader>gf", function()
 	end
 end, { desc = "Search git files" })
 
+--
 -- Telescope keybinds --
 nnoremap("<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
 nnoremap("<leader>sb", require("telescope.builtin").buffers, { desc = "[S]earch Open [B]uffers" })
