@@ -211,7 +211,7 @@ nnoremap("<leader>ss", function()
 end, { desc = "[S]earch [S]pelling suggestions" })
 
 nnoremap("<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
-nnoremap("<leader>ct", ":telescope themes<cr>", { desc = "[c]hange [t]heme" })
+nnoremap("<leader>ct", ":Telescope themes<cr>", { desc = "[c]hange [t]heme" })
 
 -- LSP Keybinds --
 M.map_lsp_keybinds = function(buffer_number)
