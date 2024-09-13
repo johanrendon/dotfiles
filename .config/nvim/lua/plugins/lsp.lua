@@ -50,8 +50,30 @@ return {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+		--  Add any additional override configuration in the following tables. Available keys are:
+		--  - cmd (table): Override the default command used to start the server
+		--  - filetypes (table): Override the default list of associated filetypes for the server
+		--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
+		--  - settings (table): Override the default settings passed when initializing the server.
+
 		local servers = {
-			pyright = {},
+			-- This settings is for use pyright with ruff. See https://github.com/astral-sh/ruff-lsp/issues/384#issuecomment-2038623937
+			pyright = {
+				settings = {
+					pyright = {
+						disableOrganizeImports = true,
+						disableTaggedHints = true,
+					},
+					python = {
+						analysis = {
+							diagnosticSeverityOverrides = {
+								-- https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
+								reportUndefinedVariable = "none",
+							},
+						},
+					},
+				},
+			},
 			rust_analyzer = {},
 			lua_ls = {
 				-- cmd = {...},
@@ -67,6 +89,7 @@ return {
 					},
 				},
 			},
+			ruff = {},
 		}
 
 		require("mason").setup()
@@ -74,9 +97,9 @@ return {
 		-- You can add other tools here that you want Mason to install
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
-			"stylua",
+			"stylua", -- Used to format Lua code
 			"debugpy",
-			"ruff",
+			"isort",
 			"codelldb",
 			"markdownlint",
 		})
@@ -90,6 +113,10 @@ return {
 					end
 
 					local server = servers[server_name] or {}
+
+					if server_name == "rust_analyzer" then
+						return
+					end
 					-- This handles overriding only values explicitly passed
 					-- by the server configuration above. Useful when disabling
 					-- certain features of an LSP (for example, turning off formatting for ts_ls)

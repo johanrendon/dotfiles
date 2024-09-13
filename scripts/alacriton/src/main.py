@@ -1,15 +1,17 @@
-import subprocess
 import shlex
+import subprocess
 from pathlib import Path
 from typing import Annotated, Optional
-from config import init_config
+
 import toml
 import typer
+from config import init_config
 
 alacritty_path: Path = Path.home() / ".config" / "alacritty"
 color_path: Path = alacritty_path / "colors.toml"
 main_path: Path = alacritty_path / "alacritty.toml"
 colorschemes_path: Path = alacritty_path / "colorschemes"
+
 
 main_config, themes = init_config(alacritty_path=alacritty_path, main_path=main_path)
 
@@ -40,7 +42,6 @@ def change_theme(
             typer.echo(f" - {t.split('.')[0]}")
 
     if gui:
-
         theme = subprocess.run(
             r"fd . {colorschemes_path} --type f '*.toml' | sed 's/\.toml$//' | xargs -n 1 basename | fzf-tmux --reverse -p".format(
                 colorschemes_path=colorschemes_path
@@ -68,6 +69,9 @@ def change_theme(
             )
             raise typer.Exit(code=1)
 
+
+a: int = 3
+a = "tres"
 
 if __name__ == "__main__":
     app()
