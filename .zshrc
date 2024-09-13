@@ -103,6 +103,8 @@ unset __conda_setup
 # Created by `pipx` on 2024-08-09 18:31:18
 export PATH="$PATH:/home/johan/.local/bin"
 
+export PATH="$PATH:$HOME/.cargo/bin/"
+
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
