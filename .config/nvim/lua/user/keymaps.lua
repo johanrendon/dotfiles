@@ -3,7 +3,6 @@ local vnoremap = require("user.keymap_utils").vnoremap
 local inoremap = require("user.keymap_utils").inoremap
 local tnoremap = require("user.keymap_utils").tnoremap
 local xnoremap = require("user.keymap_utils").xnoremap
-local conform = require("conform")
 local utils = require("user.utils")
 local harpoon_ui = require("harpoon.ui")
 local harpoon_mark = require("harpoon.mark")
@@ -117,6 +116,11 @@ nnoremap("[w", function()
 	vim.api.nvim_feedkeys("zz", "n", false)
 end, { desc = "Go to previous warning diagnostic" })
 
+-- Test
+nnoremap("<leader>tc", function()
+	require("neotest").run.run()
+end, { desc = "Init test" })
+
 -- Diagnostic window --
 nnoremap("<leader>d", function()
 	vim.diagnostic.open_float({ border = "rounded" })
@@ -142,11 +146,6 @@ nnoremap("<leader>bn", ":ObsidianQuickSwitch<cr>", { desc = "New note or search 
 nnoremap("<leader>bt", ":ObsidianTemplate<cr>", { desc = "Use templates" })
 nnoremap("<leader>bo", ":ObsidianSearch<cr>", { desc = "Search in notes" })
 nnoremap("<leader>bf", ":ObsidianFollowLink<cr>", { desc = "Follow link" })
-
--- Format buffer --
-nnoremap("<leader>f", function()
-	conform.format({ async = true, timeout_ms = 500, lsp_format = "fallback" })
-end, { desc = "Format buffer" })
 
 -- Rotate windows --
 nnoremap("<leader>rw", ":RotateWindows<cr>", { desc = "Rotate open windows" })
@@ -187,7 +186,6 @@ end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 -- require ripgrep
 nnoremap("<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
-nnoremap("<leader>ct", ":Telescope themes<cr>", { desc = "[C]hange [T]heme" })
 
 nnoremap("<leader>sc", function()
 	require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
@@ -201,11 +199,18 @@ nnoremap("<leader>/", function()
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
 
+nnoremap("<leader>sn", function()
+	require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "[S]earch [N]eovim files" })
+
 nnoremap("<leader>ss", function()
 	require("telescope.builtin").spell_suggest(require("telescope.themes").get_dropdown({
 		previewer = false,
 	}))
 end, { desc = "[S]earch [S]pelling suggestions" })
+
+nnoremap("<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
+nnoremap("<leader>ct", ":telescope themes<cr>", { desc = "[c]hange [t]heme" })
 
 -- LSP Keybinds --
 M.map_lsp_keybinds = function(buffer_number)
@@ -214,6 +219,7 @@ M.map_lsp_keybinds = function(buffer_number)
 
 	nnoremap("gd", vim.lsp.buf.definition, { desc = "LSP: [G]oto [D]efinition", buffer = buffer_number })
 
+	nnoremap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 	-- Telescope LSP keybinds --
 	nnoremap(
 		"gr",
@@ -236,6 +242,7 @@ M.map_lsp_keybinds = function(buffer_number)
 		{ desc = "LSP: [P]roject [S]ymbols", buffer = buffer_number }
 	)
 
+	nnoremap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 	-- See `:help K` for why this keymap
 	-- nnoremap("K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation", buffer = buffer_number })
 	nnoremap("<leader>k", vim.lsp.buf.signature_help, { desc = "LSP: Signature Documentation", buffer = buffer_number })
@@ -250,7 +257,7 @@ end
 nnoremap("<leader>so", ":SymbolsOutline<cr>", { desc = "Toggle Symbols Outline" })
 
 -- Toggle inlay hints
-nnoremap("<leader>ih", function()
+nnoremap("<leader>th", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({}))
 end, { desc = "Toggle inlay hints" })
 
@@ -293,10 +300,10 @@ tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]], { desc = "Move to above window" })
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Move to right window" })
 
 -- Floaterm --
-nnoremap("<leader>nt", ":FloatermNew<cr>", { desc = "Open new Floaterm" })
-nnoremap("<leader>kt", ":FloatermKill<cr>", { desc = "Kill Floaterm" })
-nnoremap("<leader>ht", ":FloatermHide<cr>", { desc = "Hide Floaterm" })
-nnoremap("<leader>tt", ":FloatermShow<cr>", { desc = "Toggle Floaterm" })
+nnoremap("<leader>nf", ":FloatermNew<cr>", { desc = "Open new Floaterm" })
+nnoremap("<leader>kf", ":FloatermKill<cr>", { desc = "Kill Floaterm" })
+nnoremap("<leader>hf", ":FloatermHide<cr>", { desc = "Hide Floaterm" })
+nnoremap("<leader>tf", ":FloatermShow<cr>", { desc = "Toggle Floaterm" })
 
 -- Tmux navigation
 nnoremap("<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { desc = "Navigate to tmux pane left" })
@@ -342,6 +349,18 @@ end, { desc = "Jump to harpoon file 4" })
 nnoremap("<leader>h5", function()
 	harpoon_ui.nav_file(5)
 end, { desc = "Jump to harpoon file 5" })
+
+--Trouble
+
+nnoremap("<leader>tt", ":Trouble diagnostics<CR>")
+
+nnoremap("[t", function()
+	require("trouble").next({ skip_groups = true, jump = true })
+end, { desc = "next trouble" })
+
+nnoremap("]t", function()
+	require("trouble").prev({ skip_groups = true, jump = true })
+end, { desc = "previous trouble" })
 
 -- Reenable default <space> functionality to prevent input delay
 tnoremap("<space>", "<space>")

@@ -14,14 +14,14 @@ return {
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"bash",
-					"c",
-					"graphql",
-					"html",
 					"json",
 					"lua",
 					"markdown",
-					"typescript",
 					"yaml",
+					"python",
+					"rust",
+					"diff",
+					"toml",
 				},
 				sync_install = false,
 				highlight = {
