@@ -56,8 +56,6 @@ nnoremap("%", "%zz", { desc = "Center buffer after matching character jump" })
 nnoremap("*", "*zz", { desc = "Center buffer after word search forward" })
 nnoremap("#", "#zz", { desc = "Center buffer after word search backward" })
 
--- Git fugitive --
-
 -- Quick find/replace --
 nnoremap("S", function()
 	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
@@ -171,7 +169,7 @@ nnoremap("<leader>gs", ":vertical Git <cr>", { desc = "Git status" })
 nnoremap("<leader>gd", ":Gvdiffsplit <cr>", { desc = "Git diff" })
 nnoremap("<leader>ga", ":Gwrite <cr>", { desc = "Git add" })
 nnoremap("<leader>gc", ":Git commit<cr>", { desc = "Git commit" })
-nnoremap("<leader>gp", ":Git push", { desc = "[G]it [Push]" })
+nnoremap("<leader>gp", ":Git push<cr>", { desc = "[G]it [Push]" })
 nnoremap("<leader>tgs", ":Telescope git_status<cr>", { desc = "Telescope git status" })
 nnoremap("<leader>tgc", ":Telescope git_commits<cr>", { desc = "Telescope git commits" })
 nnoremap("<leader>tgb", ":Telescope git_branches<cr>", { desc = "Telescope git branches" })
