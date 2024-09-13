@@ -57,14 +57,6 @@ nnoremap("*", "*zz", { desc = "Center buffer after word search forward" })
 nnoremap("#", "#zz", { desc = "Center buffer after word search backward" })
 
 -- Git fugitive --
-nnoremap("<leader>gs", ":vertical Git <cr>", { desc = "Git status" })
-nnoremap("<leader>gd", ":Gvdiffsplit <cr>", { desc = "Git diff" })
-nnoremap("<leader>ga", ":Gwrite <cr>", { desc = "Git add" })
-nnoremap("<leader>gc", ":Git commit<cr>", { desc = "Git commit" })
-
-nnoremap("<leader>tgs", ":Telescope git_status<cr>", { desc = "Telescope git status" })
-nnoremap("<leader>tgc", ":Telescope git_commits<cr>", { desc = "Telescope git commits" })
-nnoremap("<leader>tgb", ":Telescope git_branches<cr>", { desc = "Telescope git branches" })
 
 -- Quick find/replace --
 nnoremap("S", function()
@@ -174,6 +166,15 @@ nnoremap("<leader>gf", function()
 		require("telescope.builtin").git_files()
 	end
 end, { desc = "Search git files" })
+
+nnoremap("<leader>gs", ":vertical Git <cr>", { desc = "Git status" })
+nnoremap("<leader>gd", ":Gvdiffsplit <cr>", { desc = "Git diff" })
+nnoremap("<leader>ga", ":Gwrite <cr>", { desc = "Git add" })
+nnoremap("<leader>gc", ":Git commit<cr>", { desc = "Git commit" })
+nnoremap("<leader>gp", ":Git push", { desc = "[G]it [Push]" })
+nnoremap("<leader>tgs", ":Telescope git_status<cr>", { desc = "Telescope git status" })
+nnoremap("<leader>tgc", ":Telescope git_commits<cr>", { desc = "Telescope git commits" })
+nnoremap("<leader>tgb", ":Telescope git_branches<cr>", { desc = "Telescope git branches" })
 
 --
 -- Telescope keybinds --
