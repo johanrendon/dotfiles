@@ -15,6 +15,9 @@ return {
 					require("neotest-python"),
 				},
 			})
+			vim.keymap.set("n", "<leader>tc", function()
+				require("neotest").run.run()
+			end, { desc = "Init test" })
 		end,
 	},
 }
