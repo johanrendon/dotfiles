@@ -8,9 +8,6 @@ local function autostart_apps()
 	helpers.run.check_if_running("picom", nil, function()
 		awful.spawn("picom --config " .. config_dir .. "configuration/picom.conf", false)
 	end)
-	--- Music Server
-	helpers.run.run_once_pgrep("mpd")
-	helpers.run.run_once_pgrep("mpDris2")
 	--- Polkit Agent
 	helpers.run.run_once_ps(
 		"polkit-gnome-authentication-agent-1",
@@ -20,6 +17,9 @@ local function autostart_apps()
 	helpers.run.run_once_grep("blueman-applet")
 	helpers.run.run_once_grep("nm-applet")
 	helpers.run.run_once_grep("nitrogen --restore")
+	helpers.run.run_once_grep(
+		"xrandr --output HDMI-A-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1280x1024 --left-of HDMI-A-0"
+	)
 end
 
 autostart_apps()

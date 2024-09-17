@@ -83,22 +83,7 @@ awful.keyboard.append_global_keybindings({
 		bling.module.flash_focus.flashfocus(client.focus)
 	end, { description = "focus right", group = "client" }),
 
-	awful.key({ mod }, "Up", function()
-		awful.client.focus.bydirection("up")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus up", group = "client" }),
-	awful.key({ mod }, "Down", function()
-		awful.client.focus.bydirection("down")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus down", group = "client" }),
-	awful.key({ mod }, "Left", function()
-		awful.client.focus.bydirection("left")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus left", group = "client" }),
-	awful.key({ mod }, "Right", function()
-		awful.client.focus.bydirection("right")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus right", group = "client" }),
+	-- TODO: Fix this
 
 	--- Resize focused client
 	awful.key({ mod, ctrl }, "k", function(c)
@@ -114,36 +99,6 @@ awful.keyboard.append_global_keybindings({
 		helpers.client.resize_client(client.focus, "right")
 	end, { description = "resize to the right", group = "client" }),
 
-	awful.key({ mod, ctrl }, "Up", function(c)
-		helpers.client.resize_client(client.focus, "up")
-	end, { description = "resize to the up", group = "client" }),
-	awful.key({ mod, ctrl }, "Down", function(c)
-		helpers.client.resize_client(client.focus, "down")
-	end, { description = "resize to the down", group = "client" }),
-	awful.key({ mod, ctrl }, "Left", function(c)
-		helpers.client.resize_client(client.focus, "left")
-	end, { description = "resize to the left", group = "client" }),
-	awful.key({ mod, ctrl }, "Right", function(c)
-		helpers.client.resize_client(client.focus, "right")
-	end, { description = "resize to the right", group = "client" }),
-
-	--- Bling
-	--- ~~~~~
-	--- Add client to tabbed layout
-	awful.key({ alt }, "a", function()
-		bling.module.tabbed.pick_with_dmenu()
-	end, { description = "pick client to add to tab group", group = "tabs" }),
-
-	--- Remove client from tabbed layout
-	awful.key({ alt }, "d", function()
-		bling.module.tabbed.pop()
-	end, { description = "remove focused client from tabbing group", group = "tabs" }),
-
-	--- Cycle through client in tabbed layout
-	awful.key({ alt }, "s", function()
-		bling.module.tabbed.iter()
-	end, { description = "iterate through tabbing group", group = "tabs" }),
-
 	--- Hotkeys
 	--- ~~~~~~~
 	--- Music player
@@ -152,7 +107,7 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "open music client", group = "hotkeys" }),
 
 	--- Brightness Control
-	awful.key({}, "XF86MonBrightnessUp", function()
+	awful.key({}, "XF85MonBrightnessUp", function()
 		awful.spawn("brightnessctl set 5%+ -q", false)
 		awesome.emit_signal("widget::brightness")
 		awesome.emit_signal("module::brightness_osd:show", true)
@@ -261,18 +216,6 @@ client.connect_signal("request::default_keybindings", function()
 		awful.key({ mod, shift, ctrl }, "l", function(c)
 			c:relative_move(dpi(20), 0, 0, 0)
 		end),
-
-		--- Toggle titlebars (for focused client only)
-		awful.key({ mod }, "t", function(c)
-			decorations.cycle(c)
-		end, { description = "toggle titlebar", group = "client" }),
-		--- Toggle titlebars (for all visible clients in selected tag)
-		awful.key({ mod, shift }, "t", function(c)
-			local clients = awful.screen.focused().clients
-			for _, c in pairs(clients) do
-				decorations.cycle(c)
-			end
-		end, { description = "toggle titlebar", group = "client" }),
 
 		--- Toggle floating
 		awful.key({ mod, ctrl }, "space", awful.client.floating.toggle),
