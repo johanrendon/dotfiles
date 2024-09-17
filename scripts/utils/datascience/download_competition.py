@@ -33,13 +33,11 @@ def main(
 
     with zipfile.ZipFile(data_path, "r") as zip_data:
         zip_data.extractall(path=data_dir)
-
-    if data_path.exists():
-        os.remove(data_path)
+        logger.info("Files extracted")
 
     # .csv
     for file in os.listdir(data_dir):
-        if file.strip(".")[-1] != "csv":
+        if file.split(".")[-1] != "csv":
             os.remove(data_dir / file)
 
 
