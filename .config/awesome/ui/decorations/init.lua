@@ -2,7 +2,6 @@ local awful = require("awful")
 local beautiful = require("beautiful")
 local helpers = require("helpers")
 local gears = require("gears")
-local wibox = require("wibox")
 
 --- Disable popup tooltip on titlebar button hover
 awful.titlebar.enable_tooltip = false
