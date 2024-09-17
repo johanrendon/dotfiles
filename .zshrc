@@ -75,7 +75,7 @@ alias gp='git push -u origin main'
 alias lzg='lazygit'
 
 #zoxide
-alias cd=''
+alias cd='z'
 
 #custom
 alias update='sudo pacman -Syyu'
@@ -84,6 +84,7 @@ alias fh='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview=
 alias gdd='cd "$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"'
 alias data='ccds ~/Templates/cookiecutter-data-science'
 alias nk="tmux popup -E -w 80% -h 50% -x C -y C 'bat .config/nvim/lua/user/keymaps.lua'"
+alias kd="python ~/scripts/utils/datascience/download_competition.py"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
