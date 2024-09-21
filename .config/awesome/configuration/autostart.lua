@@ -17,9 +17,7 @@ local function autostart_apps()
 	helpers.run.run_once_grep("blueman-applet")
 	helpers.run.run_once_grep("nm-applet")
 	helpers.run.run_once_grep("nitrogen --restore")
-	helpers.run.run_once_grep(
-		"xrandr --output HDMI-A-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1280x1024 --left-of HDMI-A-0"
-	)
+	helpers.run.run_once_grep("xrandr --output HDMI-A-0 --primary --output DVI-D-0 --left-of HDMI-A-0")
 end
 
 autostart_apps()
