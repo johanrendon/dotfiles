@@ -52,7 +52,7 @@ nnoremap("*", "*zz", { desc = "Center buffer after word search forward" })
 nnoremap("#", "#zz", { desc = "Center buffer after word search backward" })
 
 -- Quick find/replace --
-nnoremap("S", function()
+nnoremap("<A-s>", function()
 	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
 	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
 	vim.api.nvim_feedkeys(keys, "n", false)
