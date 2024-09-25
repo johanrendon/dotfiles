@@ -125,8 +125,8 @@ nnoremap("<leader>=", "<C-w>=", { desc = "Equalize split window sizes" })
 nnoremap("<leader>rw", ":RotateWindows<cr>", { desc = "Rotate open windows" })
 
 -- Open link under cursor --
-nnoremap("gx", ":sil !open <cWORD><cr>", { silent = true, desc = "Open link under cursor" })
-
+nnoremap("gx", ":sil !xdg-open <cWORD><cr>", { silent = true, desc = "Open link under cursor" })
+-- https://johanrendon.github.io/startpage/
 -- Git keymaps --
 nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle git blame" })
 

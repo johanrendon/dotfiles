@@ -17,6 +17,10 @@ return {
 		templates = {
 			folder = "05_Others/Templates",
 		},
+
+		follow_url_func = function(url)
+			vim.fn.jobstart({ "xdg-open", url })
+		end,
 	},
 
 	vim.keymap.set("n", "<leader>bn", ":ObsidianQuickSwitch<cr>", { desc = "New note or search notes" }),
