@@ -12,7 +12,7 @@ sudo pacman -Syu --noconfirm
 
 # Install the necessary applications
 echo "Installing applications..."
-packages=("ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "npm" "rust" "unzip" "neovim" "fzf" "zoxide" "bat" "eza" "lazygit")
+packages=("zsh" "stow" "ttf-jetbrains-mono-nerd" "ttf-jetbrains-mono" "npm" "rust" "unzip" "neovim" "fzf" "zoxide" "bat" "eza" "lazygit")
 
 for package in "${packages[@]}"; do
     if ! sudo pacman -S --noconfirm "$package"; then
