@@ -1,0 +1,66 @@
+{
+    "modules-left": ["custom/launcher", "custom/spotify"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "pulseaudio", "clock","custom/power-menu"],
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": " 󰮯",
+        "default": "",
+      }
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%b %d %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+
+    "network": {
+        /* "format-wifi": "直", */
+        "format-ethernet": "",
+        "tooltip-format": "{essid}",
+        "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
+    },
+
+    "pulseaudio": {
+        "format": "{icon} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+   "custom/spotify": {
+        "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": " {}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-double-click-right": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+    },
+    "custom/power-menu": {
+        "format": " ⏻ ",
+        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
+    }, 
+    "custom/launcher": {
+        "format": "󱎯",
+        "on-click": "rofi -show drun &",
+    },
+}
