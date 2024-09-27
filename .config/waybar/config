@@ -1,5 +1,5 @@
 {
-    "modules-left": ["custom/launcher", "custom/spotify"],
+    "modules-left": ["custom/launcher", "custom/spotify",],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["network", "pulseaudio", "clock","custom/power-menu"],
 
@@ -12,7 +12,8 @@
       }
     },
     "hyprland/window": {
-        "format": "{}"
+        "format": "{}",
+        "max-lenght": 50,
     },
 
     "clock": {
@@ -57,10 +58,10 @@
     },
     "custom/power-menu": {
         "format": " ⏻ ",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
+        "on-click": "bash ~/.config/rofi/scripts/powermenu_t6 &",
     }, 
     "custom/launcher": {
         "format": "󱎯",
-        "on-click": "rofi -show drun &",
+        "on-click": "~/.config/rofi/scripts/launcher_t6",
     },
 }
