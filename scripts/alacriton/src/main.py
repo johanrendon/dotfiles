@@ -70,8 +70,5 @@ def change_theme(
             raise typer.Exit(code=1)
 
 
-a: int = 3
-a = "tres"
-
 if __name__ == "__main__":
     app()

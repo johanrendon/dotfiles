@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/dotfiles/.oh-my-zsh
 
 zstyle ':omz:update' mode disabled  # disable automatic updates
 # Uncomment the following line to enable command auto-correction.
@@ -26,10 +26,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
-
-
 # Aliases
-#
 # On-demand rehash
 zshcache_time="$(date +%s%N)"
 
@@ -88,23 +85,23 @@ alias kd="python ~/scripts/utils/datascience/download_competition.py"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/johan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/apolo/.local/share/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/johan/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/johan/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/apolo/.local/share/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/apolo/.local/share/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/johan/miniconda3/bin:$PATH"
+        export PATH="/home/apolo/.local/share/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Created by `pipx` on 2024-08-09 18:31:18
 export PATH="$PATH:/home/johan/.local/bin"
-
 export PATH="$PATH:$HOME/.cargo/bin/"
+export XDG_DATA_DIRS="$HOME/.local/bin:$XDG_DATA_DIRS"
+export PATH="$PATH:$HOME/.zig"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -115,3 +112,6 @@ eval "$(starship init zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+eval "$(register-python-argcomplete pipx)"
+
