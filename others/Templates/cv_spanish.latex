@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\setlength{\parindent}{0pt}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lipsum}
+\usepackage[left=1.06cm,top=1.7cm,right=1.06cm,bottom=0.49cm]{geometry}
+
+\begin{document}
+\begin{center}
+    \textbf{Johan Stiven Rendón Coronado}\\ 
+    \hrulefill
+\end{center}
+
+\begin{center}
+    johanrendo1@gmail.com \textbullet \ +57 3053559236
+\end{center}
+
+\vspace{0.5pt}
+
+\begin{center}
+    \textbf{Educación}
+\end{center}
+\textbf{Universidad de Antioquia} \hfill Medellín, Colombia
+
+Ingeniería Biomédica \hfill Actual
+
+\vspace{12pt}
+
+\begin{center}
+    \textbf{Experiencia}
+\end{center}
+\textbf{Protocolo para el análisis y resggistro de la correlación fisiológica entre señales de EEG y ECG en enfermedades neurodegenerativas, NeuroCO} \hfill Medellín, Antioquia 
+
+\textbf{Investigador} \hfill 2024 – Actual
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Realicé un \textbf{análisis de series temporales en señales} de EEG y ECG, mejorando la comprensión de estas y su relación con enfermedades neurodegenerativas, estableciendo la base para el protocolo.
+    \item Implementé técnicas avanzadas de visualización con \textbf{Matplotlib} y \textbf{Seaborn} para representar patrones fisiológicos, y usé \textbf{SciPy} y \textbf{MNE} para procesar y analizar señales de EEG. understand your accomplishments, skills, knowledge, abilities, or achievements.
+    \item Colaboré con un equipo multidisciplinario para definir objetivos y métodos de investigación, optimizando el proceso de recolección y análisis de datos.
+    \item Documenté resultados clave, facilitando la presentación de hallazgos preliminares en la investigación.
+\end{itemize}
+
+\vspace{12pt}
+
+\textbf{Wasalone} \hfill City, State (or Remote)
+
+\textbf{Data Integration Developer} \hfill Enero 2024 – Marzo 2024
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Responsable de la hacer web scrapping a sitios de turismo, usando herramientas como \textbf{Scrapy}, con el fin de integrar la información a una base de datos \textbf{SQL}.
+
+\end{itemize}
+
+\begin{center}
+    \textbf{Skills \& Interests [Note: Optional]}
+\end{center}
+
+\textbf{Técnicas:} Python, SQL, Rust, NoSQL, PyTorch, TensorFlow, matplotlib, JavaScript, ScikitLearn.
+
+\textbf{Languajes:} Inglés (B2)
+
+\textbf{Intereses:} Física, Estadística, Ciencias de la computación, Inteligencia Artificial, Ciencia. 
+
+\end{document}
