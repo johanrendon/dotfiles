@@ -115,3 +115,6 @@ eval "$(zoxide init zsh)"
 
 eval "$(register-python-argcomplete pipx)"
 
+
+# Created by `pipx` on 2025-03-20 21:08:16
+export PATH="$PATH:/home/shura/.local/bin"

@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/wallpapers/anime_cafe_tokyonight.png", height);
+    background-image:            url("~/Imágenes/wallpapers/a_ship_in_the_water.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
