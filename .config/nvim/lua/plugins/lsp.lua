@@ -134,6 +134,7 @@ return {
 				},
 			},
 			ruff = {},
+			zls = {},
 		}
 
 		require("mason").setup()

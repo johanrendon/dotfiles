@@ -21,6 +21,8 @@ window#waybar.hidden {
 #clock,
 #custom-media,
 #mode,
+#tray,
+#language,
 #custom-lock,
 #workspaces,
 #custom-power-menu,
@@ -76,7 +78,14 @@ window#waybar.hidden {
   margin-top: 8.5px;
   margin-bottom: 8.5px;
 }
-
+#language{
+  margin-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #7a95c9;
+  margin-top: 8.5px;
+  margin-bottom: 8.5px;
+}
 #pulseaudio,
 #network {
   background-color: #252733;

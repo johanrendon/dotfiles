@@ -14,9 +14,7 @@ return {
 			},
 		},
 		ui = { enable = false },
-		templates = {
-			folder = "05_Others/Templates",
-		},
+		templates = {},
 
 		follow_url_func = function(url)
 			vim.fn.jobstart({ "xdg-open", url })

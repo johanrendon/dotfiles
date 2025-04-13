@@ -1,7 +1,13 @@
 {
-    "modules-left": ["custom/launcher", "custom/spotify",],
+    "modules-left": ["custom/launcher","hyprland/language", "custom/spotify",],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["network", "pulseaudio", "clock","custom/power-menu"],
+    "modules-right": ["tray", "network", "pulseaudio", "clock","custom/power-menu"],
+
+
+    "hyprland/language": {
+      "format": "{short}",
+      "on-click": "hyprctl switchxkblayout semico---usb-gaming-keyboard--keyboard next",
+    },
 
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -20,8 +26,13 @@
         "format": "{:%H:%M}",
         "format-alt": "{:%b %d %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-double-click-right": "gnome-clocks"
     },
 
+    "tray": {
+      "format": "{}"
+    },
+    
     "network": {
         /* "format-wifi": "直", */
         "format-ethernet": "",
@@ -58,7 +69,7 @@
     },
     "custom/power-menu": {
         "format": " ⏻ ",
-        "on-click": "bash ~/.config/rofi/scripts/powermenu_t6 &",
+        "on-click": "~/.config/rofi/scripts/powermenu_t6",
     }, 
     "custom/launcher": {
         "format": "󱎯",

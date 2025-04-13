@@ -28,7 +28,7 @@ def main(
 
     subprocess.run(kaggle_command)
 
-    data_path: Path = data_dir / f"{ competition }.zip"
+    data_path: Path = data_dir / f"{competition}.zip"
     logger.info("Download kaggle zip")
 
     with zipfile.ZipFile(data_path, "r") as zip_data:
