@@ -33,7 +33,7 @@ Ingeniería Biomédica \hfill Actual
 \begin{center}
     \textbf{Experiencia}
 \end{center}
-\textbf{Protocolo para el análisis y resggistro de la correlación fisiológica entre señales de EEG y ECG en enfermedades neurodegenerativas, NeuroCO} \hfill Medellín, Antioquia 
+\textbf{Protocolo para el análisis y resgistro de la correlación fisiológica entre señales de EEG y ECG en enfermedades neurodegenerativas, NeuroCO} \hfill Medellín, Antioquia 
 
 \textbf{Investigador} \hfill 2024 – Actual
 \begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
@@ -45,13 +45,16 @@ Ingeniería Biomédica \hfill Actual
 
 \vspace{12pt}
 
-\textbf{Wasalone} \hfill City, State (or Remote)
+\textbf{Wasalone} \hfill Medellín, Antioquia
 
 \textbf{Data Integration Developer} \hfill Enero 2024 – Marzo 2024
 \begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
     \item Responsable de la hacer web scrapping a sitios de turismo, usando herramientas como \textbf{Scrapy}, con el fin de integrar la información a una base de datos \textbf{SQL}.
-
 \end{itemize}
+
+\textbf{Kodland} \hfill Remote
+
+\textbf{Profesor de python - Tiempo parcial} \hfill Diciembre 2024 – Actual
 
 \begin{center}
     \textbf{Skills \& Interests [Note: Optional]}
