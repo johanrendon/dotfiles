@@ -36,8 +36,10 @@ install_pkgs(){
 }
 install_aur_pkgs(){
     echo -e "${green}[*] Installing packages with $aurhelper.${no_color}"
-    "$aurhelper" -S --noconfirm --needed hyprshot waypaper light oh-my-zsh-git swaybg swaylock-effects-git swayidle pamixer brillo cava hyprland-git ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-icomoon-feather xdg-desktop-portal-hyprland-git
+    "$aurhelper" -S --noconfirm --needed polkit-gnome hyprshot waypaper light oh-my-zsh-git swaybg swaylock-effects-git swayidle pamixer brillo cava hyprland-git ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-icomoon-feather xdg-desktop-portal-hyprland-git
 }
+
+#TODO: Change this function
 create_default_directories(){
     echo -e "${green}[*] Copying configs to $config_directory.${no_color}"
     mkdir -p "$HOME"/.config
@@ -66,7 +68,7 @@ create_backup(){
 }
 copy_configs(){
     echo -e "${green}[*] Copying configs to $config_directory.${no_color}"
-    stow .config/ .zshrc .condarc .git .oh-my-zsh/ wallpapers
+    stow .    
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 }
@@ -78,14 +80,6 @@ copy_fonts(){
     echo -e "${green}[*] Copying fonts to $fonts_directory.${no_color}"
     sudo cp -r ./fonts/* "$fonts_directory"
     fc-cache -fv
-}
-copy_other_configs(){
-    echo -e "${green}[*] Copying wallpapers to "$HOME"/Pictures/wallpapers.${no_color}"
-    cp -r ./wallpapers/* "$HOME"/Pictures/wallpapers
-}
-install_additional_pkgs(){
-    echo -e "${green}[*] Installing additional packages with $aurhelper.${no_color}"
-    "$aurhelper" -S --noconfirm --needed dhcpcd gimp iwd libreoffice ntfs-3g ntp pulsemixer vnstat
 }
 install_emoji_fonts(){
     echo -e "${green}[*] Installing emoji fonts with $aurhelper.${no_color}"
@@ -122,10 +116,8 @@ options=(1 "System update" on
          7 "Copy configs" on
          8 "Copy scripts" on
          9 "Copy fonts" on
-         10 "Copy other configs (gtk theme, wallpaper, vsc configs, zsh configs)" on
-         11 "Install additional packages" off
-         12 "Install emoji fonts" off
-         13 "Make Light executable, set zsh as default shell, update nvim extensions." on)
+         10 "Install emoji fonts" off
+         11 "Make Light executable, set zsh as default shell, update nvim extensions." on)
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 
 clear
@@ -142,9 +134,7 @@ do
         7) copy_configs;;
         8) copy_scripts;;
         9) copy_fonts;;
-        10) copy_other_configs;;
-        11) install_additional_pkgs;;
-        12) install_emoji_fonts;;
-        13) finishing;;
+        10) install_emoji_fonts;;
+        11) finishing;;
     esac
 done
