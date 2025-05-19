@@ -4,9 +4,6 @@ local inoremap = require("user.keymap_utils").inoremap
 local tnoremap = require("user.keymap_utils").tnoremap
 local xnoremap = require("user.keymap_utils").xnoremap
 local utils = require("user.utils")
-local harpoon_ui = require("harpoon.ui")
-local harpoon_mark = require("harpoon.mark")
-
 local M = {}
 
 -- Normal --
@@ -200,46 +197,7 @@ tnoremap("<C-j>", [[<Cmd>wincmd j<CR>]], { desc = "Move to below window" })
 tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]], { desc = "Move to above window" })
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Move to right window" })
 
--- Harpoon keybinds --
--- Open harpoon UI
-nnoremap("<leader>ho", function()
-	harpoon_ui.toggle_quick_menu()
-end, { desc = "Open harpoon UI" })
-
--- Add current file to harpoon
-nnoremap("<leader>ha", function()
-	harpoon_mark.add_file()
-end, { desc = "Add current file to harpoon" })
-
--- Remove current file from harpoon
-nnoremap("<leader>hr", function()
-	harpoon_mark.rm_file()
-end, { desc = "Remove current file from harpoon" })
-
--- Remove all files from harpoon
-nnoremap("<leader>hc", function()
-	harpoon_mark.clear_all()
-end, { desc = "Clear all harpoon files" })
-
--- Quickly jump to harpooned files
-nnoremap("<leader>h1", function()
-	harpoon_ui.nav_file(1)
-end, { desc = "Jump to harpoon file 1" })
-nnoremap("<leader>h2", function()
-	harpoon_ui.nav_file(2)
-end, { desc = "Jump to harpoon file 2" })
-nnoremap("<leader>h3", function()
-	harpoon_ui.nav_file(3)
-end, { desc = "Jump to harpoon file 3" })
-nnoremap("<leader>h4", function()
-	harpoon_ui.nav_file(4)
-end, { desc = "Jump to harpoon file 4" })
-nnoremap("<leader>h5", function()
-	harpoon_ui.nav_file(5)
-end, { desc = "Jump to harpoon file 5" })
-
 --Trouble
-
 nnoremap("<leader>tt", ":Trouble diagnostics<CR>")
 
 nnoremap("[t", function()
