@@ -55,13 +55,6 @@ nnoremap("<A-s>", function()
 	vim.api.nvim_feedkeys(keys, "n", false)
 end, { desc = "Find/replace word under cursor" })
 
-vnoremap("sv", function()
-	-- Press 'sv' for quick find/replace in visual mode
-	local cmd = ":<C-u>'<,'>s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
-	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-	vim.api.nvim_feedkeys(keys, "n", false)
-end, { desc = "Find/replace selected text" })
-
 -- Move to start/end of line --
 nnoremap("L", "$", { desc = "Move to end of line" })
 nnoremap("H", "^", { desc = "Move to start of line" })
@@ -124,6 +117,7 @@ nnoremap("<leader>rw", ":RotateWindows<cr>", { desc = "Rotate open windows" })
 -- Open link under cursor --
 nnoremap("gx", ":sil !xdg-open <cWORD><cr>", { silent = true, desc = "Open link under cursor" })
 -- https://johanrendon.github.io/startpage/
+
 -- Git keymaps --
 nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle git blame" })
 

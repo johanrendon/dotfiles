@@ -10,7 +10,7 @@ return {
 		workspaces = {
 			{
 				name = "Brain",
-				path = "~/Brain/",
+				path = "~/Notas/",
 			},
 		},
 		ui = { enable = false },
