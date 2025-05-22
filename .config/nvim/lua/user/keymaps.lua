@@ -10,6 +10,17 @@ local M = {}
 -- Disable space bar --
 nnoremap("<space>", "<nop>")
 
+nnoremap("<leader>Z", ":ZenMode<cr>", { desc = "ZenMode" })
+
+nnoremap("<F9>", function()
+	local current = vim.opt.signcolumn:get()
+	if current == "auto" then
+		vim.opt.signcolumn = "no"
+	else
+		vim.opt.signcolumn = "auto"
+	end
+end, { desc = "Toggle signcolumn" })
+
 -- Swap between last two buffers
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
