@@ -52,7 +52,7 @@ vim.opt.undofile = true
 vim.opt.termguicolors = true
 
 -- Enable the sign column to prevent the screen from jumping
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "auto"
 
 -- Enable access to System Clipboard
 vim.opt.clipboard = "unnamed,unnamedplus"
@@ -74,7 +74,7 @@ vim.opt.foldtext = ""
 vim.opt.scrolloff = 8
 
 -- Place a column line
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.opt.guicursor = {
 	"n-v-c:block", -- Normal, visual, command-line: block cursor
