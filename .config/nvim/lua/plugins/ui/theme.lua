@@ -5,4 +5,5 @@ return {
 	"folke/tokyonight.nvim",
 	"ellisonleao/gruvbox.nvim",
 	"navarasu/onedark.nvim",
+	"rebelot/kanagawa.nvim",
 }
