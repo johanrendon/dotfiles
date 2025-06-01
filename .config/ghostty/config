@@ -3,7 +3,7 @@ clipboard-write = allow
 window-save-state = always
 
 # Theme
-theme = Dracula
+theme = nord
 window-theme = dark
 background-opacity = 0.8
 
