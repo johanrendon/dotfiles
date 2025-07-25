@@ -83,6 +83,8 @@ alias data='ccds ~/Templates/cookiecutter-data-science'
 alias nk="tmux popup -E -w 80% -h 50% -x C -y C 'bat .config/nvim/lua/user/keymaps.lua'"
 alias kd="python ~/scripts/utils/datascience/download_competition.py"
 
+alias vactivate='source .venv/bin/activate'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/shura/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
