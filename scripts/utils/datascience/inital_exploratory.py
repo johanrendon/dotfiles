@@ -1,19 +1,18 @@
-import pandas as pd
-from pandas.core.frame import duplicated
-import typer
 from itertools import zip_longest
 from pathlib import Path
 from typing import Annotated, List
+
+import pandas as pd
+import typer
+from pandas.core.frame import duplicated
 from rich.console import Console
 from rich.table import Table
-
 
 app = typer.Typer()
 
 
 @app.command()
 def initial(path: Annotated[Path, typer.Argument(help="Dataset path")]) -> None:
-
     path = path.resolve()
 
     dataset = pd.read_csv(path)
@@ -27,13 +26,15 @@ def initial(path: Annotated[Path, typer.Argument(help="Dataset path")]) -> None:
     config_table(cat_features, num_features, nulls, duplicated)
 
 
+ola: int = "que mas"
+
+
 def config_table(
     cat_features: List[str],
     num_features: List[str],
     null_number: int,
     duplicated_number: int,
 ) -> None:
-
     console = Console()
     features_table = Table(show_header=True, header_style="bold magenta")
     features_table.add_column("Catergorical", style="dim", width=12)

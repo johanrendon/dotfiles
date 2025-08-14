@@ -101,22 +101,22 @@ return {
 
 		local servers = {
 			-- This settings is for use pyright with ruff. See https://github.com/astral-sh/ruff-lsp/issues/384#issuecomment-2038623937
-			pyright = {
-				-- settings = {
-				-- 	pyright = {
-				-- 		disableOrganizeImports = true,
-				-- 		disableTaggedHints = true,
-				-- 	},
-				-- 	python = {
-				-- 		analysis = {
-				-- 			diagnosticSeverityOverrides = {
-				-- 				-- https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
-				-- 				reportUndefinedVariable = "none",
-				-- 			},
-				-- 		},
-				-- 	},
-				-- },
-			},
+			-- pyright = {
+			-- settings = {
+			-- 	pyright = {
+			-- 		disableOrganizeImports = true,
+			-- 		disableTaggedHints = true,
+			-- 	},
+			-- 	python = {
+			-- 		analysis = {
+			-- 			diagnosticSeverityOverrides = {
+			-- 				-- https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
+			-- 				reportUndefinedVariable = "none",
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
+			-- },
 			rust_analyzer = {},
 			lua_ls = {
 				-- cmd = {...},
