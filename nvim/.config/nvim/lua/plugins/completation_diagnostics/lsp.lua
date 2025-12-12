@@ -109,17 +109,8 @@ return {
 		-- -- SERVIDORES LSP --
 		local servers = {
 			-- Python: Usamos Pyright para tipos y Ruff para linting/formato
-			pyright = {
-				settings = {
-					python = {
-						analysis = {
-							-- Desactivamos algunas cosas que Ruff hace mejor
-							ignore = { "*" },
-						},
-					},
-				},
-			},
 			ruff = {},
+			pyrefly = {},
 
 			-- Rust
 			-- rust_analyzer = {},
@@ -139,11 +130,15 @@ return {
 				},
 			},
 
+			-- Arduino
+			arduino_language_server = {},
+
 			-- Otros
 			zls = {}, -- Zig
 			bashls = {},
 			fish_lsp = {},
 			marksman = {},
+			clangd = {},
 		}
 
 		require("mason").setup()
