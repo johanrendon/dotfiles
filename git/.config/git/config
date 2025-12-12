@@ -1,7 +1,7 @@
-[user]
-	name = Johan Stiven Rendón Coronado
-	email = johanrendo1@gmail.com
 [init]
 	defaultBranch = main
 [core]
 	editor = nvim
+[user]
+	name = Johan Stiven Rendón Coronado
+	email = johanrendo1@gmail.com
