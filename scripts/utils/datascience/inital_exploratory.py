@@ -26,9 +26,6 @@ def initial(path: Annotated[Path, typer.Argument(help="Dataset path")]) -> None:
     config_table(cat_features, num_features, nulls, duplicated)
 
 
-ola: int = "que mas"
-
-
 def config_table(
     cat_features: List[str],
     num_features: List[str],
