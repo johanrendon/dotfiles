@@ -1,0 +1,38 @@
+clipboard-read = allow
+clipboard-write = allow
+window-save-state = always
+
+# Theme
+theme = Rose Pine
+window-theme = dark
+background-opacity = 0.8
+
+# Font
+font-family = FiraCode Nerd Font
+font-size = 14
+
+# Shells
+shell-integration = fish
+command = /usr/bin/fish --login --interactive
+
+
+# Create splits
+keybind = alt+j=new_split:down
+keybind = alt+h=new_split:left
+keybind = alt+k=new_split:up
+keybind = alt+l=new_split:right
+keybind = alt+f=toggle_split_zoom
+
+# Move to splits
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
+# Move to tab
+keybind = alt+a>n=next_tab
+keybind = alt+a>p=previous_tab
+
+keybind = ctrl+r=reload_config
+
+keybind = alt+q=close_surface
