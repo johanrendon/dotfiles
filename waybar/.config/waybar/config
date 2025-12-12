@@ -1,0 +1,110 @@
+{
+    // =============================================================================
+    // BAR LAYOUT
+    // =============================================================================
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/language",
+        "custom/spotify",
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "pulseaudio",
+        "clock",
+        "custom/power-menu"
+    ],
+
+    // =============================================================================
+    // HYPRLAND MODULES
+    // =============================================================================
+    
+    // Workspaces configuration
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+
+    // Keyboard Language Layout
+    "hyprland/language": {
+        "format": "{short}" // Shows "en", "es", etc.
+    },
+
+    // =============================================================================
+    // SYSTEM MODULES
+    // =============================================================================
+
+    // System Tray
+    "tray": {
+        "format": "{}"
+    },
+
+    // Clock and Calendar
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%b %d %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-double-click-right": "gnome-clocks"
+    },
+
+    // Network Connection
+    "network": {
+        // "format-wifi": "直", 
+        "format-ethernet": "",
+        "tooltip-format": "{essid}",
+        "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh"
+    },
+
+    // Audio / Volume
+    "pulseaudio": {
+        "format": "{icon} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol" // Opens volume control
+    },
+
+    // =============================================================================
+    // CUSTOM MODULES
+    // =============================================================================
+
+    // Application Launcher (Rofi)
+    "custom/launcher": {
+        "format": "󱎯",
+        "on-click": "~/.config/rofi/scripts/launcher/launcher.sh"
+    },
+
+    // Spotify Player Control
+    "custom/spotify": {
+        "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": " {}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-double-click-right": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    // Power Menu (Shutdown, Reboot, etc.)
+    "custom/power-menu": {
+        "format": " ⏻ ",
+        "on-click": "~/.config/rofi/scripts/powermenu/powermenu.sh"
+    }
+}

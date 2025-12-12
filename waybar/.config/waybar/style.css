@@ -1,0 +1,165 @@
+/* Background colors */
+@define-color bg-module      #252733;
+@define-color bg-tooltip     #1f232b;
+
+/* Text colors */
+@define-color text-main      #e5e5e5;   
+@define-color text-muted     #8a909e;   
+
+/* Accent colors */
+@define-color accent-blue    #7a95c9;  
+@define-color accent-cyan    #81A1C1;   
+@define-color accent-indigo  #5E81AC;  
+@define-color accent-gold    #ecd3a0;   
+@define-color accent-red     #fb958b;   
+@define-color accent-pink    #e78284;   
+
+/* =============================================================================
+ * Global config
+   ============================================================================= */
+
+* {
+  font-family: "Material Design Icons", "JetBrainsMono Nerd Font", "Iosevka Nerd Font";
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: transparent; 
+  color: @text-main;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+/* =============================================================================
+ * Common style
+   ============================================================================= */
+
+#clock,
+#custom-media,
+#mode,
+#tray,
+#language,
+#custom-lock,
+#workspaces,
+#custom-power-menu,
+#custom-launcher,
+#custom-spotify {
+  background-color: @bg-module;
+  color: @text-main;
+
+  border-radius: 20px;
+  padding: 1px 10px;
+  font-size: 14px;
+
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+  color: @accent-blue;
+  box-shadow: inset 0 3px transparent;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin: 0px;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.active {
+  color: @accent-gold;
+}
+
+/* --- LAUNCHER --- */
+#custom-launcher {
+  color: @accent-blue;
+  font-size: 18px; 
+  margin-left: 12px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+/* --- GROUP: audio and network --- */
+#pulseaudio,
+#network {
+  background-color: @bg-module;
+  font-size: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Audio */
+#pulseaudio {
+  color: @accent-cyan;
+  border-radius: 0px 20px 20px 0px; 
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0px;
+}
+
+#pulseaudio.muted {
+  color: @accent-red;
+}
+
+/* network */
+#network {
+  color: @accent-indigo;
+  border-radius: 20px 0px 0px 20px;  
+  padding-left: 15px;
+  padding-right: 10px;
+  margin-right: 0px;
+}
+
+#network.disconnected {
+  color: @accent-red;
+}
+
+/* --- CLOCK --- */
+#clock {
+  color: @text-muted;
+  font-family: "Iosevka Nerd Font";
+  font-weight: bold;
+}
+
+/* --- SPOTIFY --- */
+#custom-spotify {
+  color: @text-muted;
+}
+
+/* --- LANGUAGE --- */
+#language {
+  color: @accent-blue;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* --- POWER MENU --- */
+#custom-power-menu {
+  color: @accent-pink;
+  margin-right: 12px;
+  padding-right: 12px;
+}
+
+/* =============================================================================
+   TOOLTIPS
+   ============================================================================= */
+
+tooltip {
+  background-color: @bg-tooltip;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: "Iosevka Nerd Font";
+}
+
+tooltip label {
+  padding: 5px;
+  font-family: "Iosevka Nerd Font";
+}
