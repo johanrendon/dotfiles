@@ -67,3 +67,6 @@ starship init fish | source
 # Set nvim as default editor for opencode and other tools
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+
+# Arduino Configuration
+set -gx ARDUINO_CLI_PATH /usr/bin/arduino-cli
