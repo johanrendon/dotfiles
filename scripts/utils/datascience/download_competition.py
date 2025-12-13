@@ -6,7 +6,6 @@ from typing import Annotated, List
 
 import typer
 from loguru import logger
-from tqdm import tqdm
 
 app = typer.Typer()
 
