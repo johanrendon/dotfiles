@@ -9,6 +9,7 @@ return {
 			{ "<leader>tb", group = "[T]ab" },
 			{ "<leader>th", group = "[T]heme" },
 			{ "<leader>c", group = "[C]ode related" },
+			{ "<leader>x", group = "Trouble Diagnostics" },
 			{ "<C-h>", desc = "Move to left split" },
 			{ "<C-j>", desc = "Move to below split" },
 			{ "<C-k>", desc = "Move to above split" },

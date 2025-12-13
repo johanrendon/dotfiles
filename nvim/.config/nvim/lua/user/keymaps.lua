@@ -48,7 +48,7 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Center buffer after previous search re
 vim.keymap.set("n", "n", "nzz", { desc = "Center buffer after next search result" })
 vim.keymap.set("n", "G", "Gzz", { desc = "Center buffer after end of file jump" })
 vim.keymap.set("n", "gg", "ggzz", { desc = "Center buffer after beginning of file jump" })
-vim.keymap.set("n", "gd", "gdzz", { desc = "Center buffer after go to definition" })
+
 vim.keymap.set("n", "<C-i>", "<C-i>zz", { desc = "Center buffer after jump forward" })
 vim.keymap.set("n", "<C-o>", "<C-o>zz", { desc = "Center buffer after jump backward" })
 vim.keymap.set("n", "%", "%zz", { desc = "Center buffer after matching character jump" })
