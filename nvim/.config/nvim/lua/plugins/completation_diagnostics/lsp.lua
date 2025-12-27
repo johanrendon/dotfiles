@@ -110,7 +110,9 @@ return {
 		local servers = {
 			-- Python: Usamos Pyright para tipos y Ruff para linting/formato
 			ruff = {},
-			pyrefly = {},
+			-- basedpyright = {},
+			-- pyrefly = {},
+			ty = {},
 
 			-- Rust
 			-- rust_analyzer = {},
