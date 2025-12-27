@@ -1,6 +1,7 @@
 add_newline = true
 command_timeout = 200
-format = "[$directory$git_branch$git_status]($style)$character"
+format = " [$directory$git_branch$git_status]($style)$character"
+right_format = "$python"
 
 palette = "rose-pine"
 
@@ -50,3 +51,8 @@ stashed    = ""
 staged     = ""
 renamed    = ""
 deleted    = ""
+
+[python]
+format = '[(\($virtualenv\) )]($style)'
+style = "rose"
+
