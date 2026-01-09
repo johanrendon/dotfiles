@@ -7,6 +7,8 @@ if test -d ~/.local/bin
     end
 end
 
+set -U fish_greeting
+
 # opencode
 fish_add_path /home/syl/.opencode/bin
 
