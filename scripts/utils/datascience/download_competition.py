@@ -4,6 +4,7 @@ import zipfile
 from pathlib import Path
 from typing import Annotated, List
 
+import pandas
 import typer
 from loguru import logger
 
